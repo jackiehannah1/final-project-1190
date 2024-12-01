@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Adam Kann</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    font-family: 'Raleway', sans-serif;
+    }
+
+    h3 {
+    font-size: 20px; 
+    font-weight:330;
+    letter-spacing: 3px;
+    }
+
+    hr {
+    color: grey; 
+    opacity: 50%;
+    width: 80%;
+    }
+/*CSS for h3 in all sections-- J to move later */
+
+    .head {
+        /*head (parent) = logo (child) and nav (child)*/
+
+        display:flex;
+        padding-block-end: 100px;
+
+        /*display:flex was used to turn head into a flex container, and align children (put logo and nav bar in same line)
+        padding-block-end was used to create a 100px buffer between header and about section*/
+        }
+        
+
+        #logo {
+                flex:1;
+                padding-left: 25px;
+
+        /*flex:1 = shorthand for flex-grow property--used to control how much space an element will take up. 
+        EG: flex set to 1 with 2 elements: each element will take up same amount of available space. 2 elements can 
+        have different flex values if one needs to take up more space than the other.
+
+        padding left 25 px to push the logo into a better positin with reference to the left*/
+        }
+
+
+        nav { 
+            flex:1;
+            justify-content:space-between;
+            align-items:right; 
+
+            /*justify-content controls spacing between and around content. Space-between= first item flush with main start edge, last item is flush with main-end edge. 
+            USE SPACE EVENLY FOR BIO SECTION
+            align-items: right is used to align the nav on the right side */
+            }
+
+            .nav-list {
+                list-style-type:none;
+                text-decoration-color: black;
+                padding-right: 25px;
+                padding-left:  810px;
+            }
+            li{
+                display: inline;
+                padding: 12px;
+                /*display in line is what makes the list atually horizontal*/
+
+            }
+
+            a:link { text-decoration:none; color:black;}
+            a:visited {text-decoration:none;color:black;}
+            a:hover {text-decoration:none;color:#800020}
+            a:active{text-decoration:underline;}
+            /*this stuff is used to decorate the nav bar*/
+
+            ul li:hover{
+                background-color: rgba(231, 231, 231, 0.3);
+                opacity: 70%;
+                user-select: none;
+                cursor: pointer;
+            
+            }
+            ul li:nth-child(4){
+                background-color: rgba(231, 231, 231, 0.3);
+                opacity: 70%;
+                
+            }
+            ul li:nth-child(4) a {
+            color:#800020;
+            }
+
+            /*CSS for h3 in all sections-- J to move later */
+
+
+
+/*-------------------------END OF HEADER----------------------------------------*/
+
+/*-------------------------START OF BIOGRAPHY SECITON---------------------------*/
+
+    .content{
+        display:flex;
+        justify-content:space-evenly;
+        align-items: center;
+        padding-block-start: 50px;
+        padding-block-end: 50px;
+        width:1000px;
+        margin-left: 250px;
+    }
+    /*paddding block start and end for space at start and end of section*/
+
+        .column-left{
+            flex:1; 
+            text-align: center;
+            align-content: center;
+    /*align content center here pushes the text to the middle of the box*/
+        }
+
+
+        .column-right {
+            flex:1;
+            position:relative;
+
+        }
+
+        .btn{
+            background: rgba(231, 231, 231, 0.624);
+            color:black;
+            width: 170px;
+            height: 70px;
+            user-select:none;
+            cursor:pointer; 
+            transition: all .7s ease;
+        }
+
+        .btn:hover{
+            background:black;
+            color:white;
+            border-radius:10%;
+            /* border-bottom-right-radius:60%; */
+            width: 190px;
+        }
+
+        .btn:active{
+            background:grey;
+            color:white;
+            /* border-bottom-right-radius:10%; */
+            width: 190px;}
+
+    .column-right figure::before{
+        content:"";
+        width:100%;
+        height:100%;
+        background-image:linear-gradient(rgba(231, 231, 231, 0.3),rgba(255, 255, 255, 0.354));
+        top:0;
+        left:0;
+        position:absolute
+    }
+ /*--------------------------END OF BIOGRAPHY SECTION---------------------------*/
+
+/*---------------------------------------START OF AWARDS AND EXHIBITIONS-----------------*/
+    .a-e-content{
+        display: flex; 
+        justify-content: center;
+        padding-block-start: 30px;
+        width: 800px;
+        margin-inline-start: 300px;
+    /*figure out left margin here to put container in center*/
+    }
+
+        .a-e-content-left{
+            flex:1;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+        
+        }
+
+        .a-e-content-right{
+            flex:1;
+            flex-direction: column;
+            text-align:center
+        }
+
+        .a-e-content-left ul li{
+            color:black;
+            
+        }
+
+        .a-e-content-right ul li{
+            color:black
+        }
+
+        .a-e-content-right ul li:hover{
+            color:#800020;
+            background-color: white;
+            opacity: 70%;
+            user-select: none;
+            cursor: pointer;
+        }
+        .a-e-content-left ul li:hover{
+            color:#800020;
+            background-color: white;
+            opacity: 70%;
+            user-select: none;
+            cursor: pointer;
+        }
+
+/*--------------------------------END OF AWARDS AND EXHIBITIONS----------------------/*
+
+/*----------------------------------START OF SELECTED CLIENTS-------------------------------*/
+    .selected-clients{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        /* position:relative; */
+        
+    }
+    .container{
+        width:800px;
+       height:200px;
+        background-image:url(clients-screenshot.png);
+        position:relative;
+        overflow: hidden;
+        transition: all .2s ease;
+
+    }
+
+    .container:hover{
+        border-radius: 20%;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.232);
+    }
+
+    .item{
+        width:100px;
+        height:100px;
+        background-color: #800020;
+        opacity: .2;
+        position:absolute;
+        /* transform: translate (100px,50px) scale (1.5) rotate(45 deg) skew(30 deg); */
+        transition:all 0.3s ease-in;
+        transform:translate(-100px,0) ;
+    }
+
+    .container:hover .item{
+        transform: translate(100px, 0px) scale(13);
+        opacity:.2;
+        background-color: #800020;
+    }
+
+    </style>
+
+</head>
+
+
+<body>
+    <!--header section-->
+    <header class="head">
+        <a href="images copy/logo screenshot.png"><img src="images copy/logo screenshot.png" id="logo" alt=logo width=200px></a>
+        <nav class="navbar">
+            <ul class= "nav-list" style="font-size: smaller;">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Portraits</a></li>
+                <li><a href="#">Comissions</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+<!--bio section-->
+        <section id="about">
+
+            <h2 style="text-align: center; font-weight:275; font-size: 40px; letter-spacing: 10px;">ABOUT ADAM KANN</h2>
+
+            <div class="content">
+
+                <div class="column-left" style="background-color:rgba(231, 231, 231, 0.624); width: 473px; height: 579px;">
+                        <h3 style="font-size: 20px; font-weight:330;letter-spacing: 3px;">BIOGRAPHY</h3>
+                        <article>
+                            <p style="font-size:13.5px; font-weight: 277px; letter-spacing: 1px;line-height:28px; padding-left: 17%; padding-right: 17%;">I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p>
+                        
+                            <p style="font-size:13.5px; font-weight: 277px; letter-spacing: 1px;line-height:28px; padding-left: 17%; padding-right: 17%;"> This is a great space to write a long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide.</p>
+
+                            <button class="btn"> More About Adam</button>
+                        </article>
+                </div>
+
+
+
+                <div class="column-right">
+                        <figure style="position: relative;">
+                            <a href="images copy/about image.png"><img src="images copy/about image.png" alt=headshot width="473px" ></a>
+                        </figure>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+<!-------------------------------------awards and exhibitions section---------------------------------->
+        <section class="a-e-content">
+            <div class="a-e-content-left">
+                <h3 style="margin-left: 50px;">AWARDS</h3> <!--this is aligned to center but not correctly-->
+                    <ul class="awards-list" style="line-height: 1.5;" >
+                        <li><p><b>2035</b><br>
+                                DR Photography-Best Editorial</p></li>
+                        <li><p><b>2035</b><br>
+                                DR Photography-Best Portrait</p></li>
+                        <li><p><b>2035</b><br>
+                                PHY Journal-Best Series Nominee</p></li>
+                    </ul>
+            </div>
+            <div class="a-e-content-right">
+                <h3 style="margin-left: 50px;";>EXHIBITIONS</h3><!--this is aligned to center but not correctly-->
+                    <ul class="exhibitions-list" style="line-height:1.5;">
+                         <li><p><b>2035</b><br>
+                                Strand-Group Exhibition</p></li>
+                        <li></p><b>2035</b><br>
+                                Cafe Otto-Group Exhibition</p></li>
+                        <li><p><b>2035</b><br>
+                                Mirador Gallery-Group Exhibition</p></li>
+                    </ul>
+            </div>
+        </section>
+
+<br>
+<hr>
+<br>      
+<!-----------------------------selected clients section------------------------------->
+        <section class="selected-clients">
+            <h3>SELECTED CLIENTS</h3>
+            <!-- <figure class="container"><a href="images copy/clients screenshot.png"><img src="images copy/clients screenshot.png"alt="clients"width="1072px"></a> -->
+            <div class="container">
+                <div class="item"></div>
+            </div>
+        </section>
+
+    
+    </main>
+
+    <footer style="text-align: center;">
+        <p style="text-align:center;">&copy; 2035 by Adam Kann. Powered and secured by <u>Wix</u></p>
+    </footer>
+</body>
+</html>
